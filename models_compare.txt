@@ -1,0 +1,626 @@
+$ python models_compare.py 
+device=cuda
+Split зафиксирован: train=45000, val=5000, test=10000
+
+#########
+ Обучение: microsoft/swin-base-patch4-window7-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 449/449 [00:00<00:00, 3514.61it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.2071
+  батч: 800/1407, train_loss 0.0884
+  батч: 1200/1407, train_loss 0.0737
+  val_loss 0.0613
+  сохранены веса лучшей модели: weights/microsoft_swin-base-patch4-window7-224_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0550
+  батч: 800/1407, train_loss 0.0688
+  батч: 1200/1407, train_loss 0.0624
+  val_loss 0.0607
+  сохранены веса лучшей модели: weights/microsoft_swin-base-patch4-window7-224_best.pt
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0514
+  батч: 800/1407, train_loss 0.0526
+  батч: 1200/1407, train_loss 0.0555
+  val_loss 0.0621
+Обучение заняло 803.5 сек
+
+#########
+ Оценка: microsoft/swin-base-patch4-window7-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 449/449 [00:00<00:00, 3057.72it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.98      0.98      0.98      1000
+  automobile       0.98      0.99      0.98      1000
+        bird       0.99      0.97      0.98      1000
+         cat       0.93      0.96      0.95      1000
+        deer       0.98      0.96      0.97      1000
+         dog       0.97      0.94      0.96      1000
+        frog       0.98      0.99      0.99      1000
+       horse       0.98      0.99      0.98      1000
+        ship       0.99      0.99      0.99      1000
+       truck       0.99      0.97      0.98      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9762, инференс: 53.18 сек на 10000 картинок
+
+#########
+ Обучение: google/vit-base-patch16-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 3553.92it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.2033
+  батч: 800/1407, train_loss 0.1154
+  батч: 1200/1407, train_loss 0.0966
+  val_loss 0.0934
+  сохранены веса лучшей модели: weights/google_vit-base-patch16-224_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0772
+  батч: 800/1407, train_loss 0.0853
+  батч: 1200/1407, train_loss 0.0865
+  val_loss 0.0875
+  сохранены веса лучшей модели: weights/google_vit-base-patch16-224_best.pt
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0624
+  батч: 800/1407, train_loss 0.0756
+  батч: 1200/1407, train_loss 0.0691
+  val_loss 0.0893
+Обучение заняло 639.3 сек
+
+#########
+ Оценка: google/vit-base-patch16-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 3948.60it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.97      0.97      0.97      1000
+  automobile       0.96      0.98      0.97      1000
+        bird       0.97      0.98      0.97      1000
+         cat       0.92      0.94      0.93      1000
+        deer       0.97      0.97      0.97      1000
+         dog       0.95      0.94      0.94      1000
+        frog       0.98      0.98      0.98      1000
+       horse       0.99      0.97      0.98      1000
+        ship       0.99      0.97      0.98      1000
+       truck       0.97      0.96      0.97      1000
+
+    accuracy                           0.97     10000
+   macro avg       0.97      0.97      0.97     10000
+weighted avg       0.97      0.97      0.97     10000
+
+Accuracy: 0.9676, инференс: 42.69 сек на 10000 картинок
+
+#########
+ Обучение: facebook/convnextv2-base-22k-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 380/380 [00:00<00:00, 3477.96it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.1395
+  батч: 800/1407, train_loss 0.0744
+  батч: 1200/1407, train_loss 0.0675
+  val_loss 0.0707
+  сохранены веса лучшей модели: weights/facebook_convnextv2-base-22k-224_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0481
+  батч: 800/1407, train_loss 0.0581
+  батч: 1200/1407, train_loss 0.0556
+  val_loss 0.0708
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0371
+  батч: 800/1407, train_loss 0.0421
+  батч: 1200/1407, train_loss 0.0525
+  val_loss 0.0693
+  сохранены веса лучшей модели: weights/facebook_convnextv2-base-22k-224_best.pt
+Обучение заняло 841.8 сек
+
+#########
+ Оценка: facebook/convnextv2-base-22k-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 380/380 [00:00<00:00, 3187.84it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.97      0.99      0.98      1000
+  automobile       0.98      0.99      0.99      1000
+        bird       0.98      0.98      0.98      1000
+         cat       0.94      0.95      0.95      1000
+        deer       0.98      0.98      0.98      1000
+         dog       0.97      0.96      0.96      1000
+        frog       0.98      0.98      0.98      1000
+       horse       0.99      0.98      0.99      1000
+        ship       0.99      0.99      0.99      1000
+       truck       0.99      0.98      0.98      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9782, инференс: 57.44 сек на 10000 картинок
+
+#########
+ Обучение: microsoft/cvt-21 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 731/731 [00:00<00:00, 10350.26it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 1.3402
+  батч: 800/1407, train_loss 1.1019
+  батч: 1200/1407, train_loss 1.0684
+  val_loss 0.6886
+  сохранены веса лучшей модели: weights/microsoft_cvt-21_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 1.0325
+  батч: 800/1407, train_loss 1.0149
+  батч: 1200/1407, train_loss 1.0210
+  val_loss 0.6521
+  сохранены веса лучшей модели: weights/microsoft_cvt-21_best.pt
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.9995
+  батч: 800/1407, train_loss 1.0031
+  батч: 1200/1407, train_loss 1.0143
+  val_loss 0.6329
+  сохранены веса лучшей модели: weights/microsoft_cvt-21_best.pt
+Обучение заняло 427.0 сек
+
+#########
+ Оценка: microsoft/cvt-21 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 731/731 [00:00<00:00, 24146.01it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.75      0.83      0.79      1000
+  automobile       0.86      0.88      0.87      1000
+        bird       0.71      0.65      0.68      1000
+         cat       0.67      0.63      0.65      1000
+        deer       0.67      0.75      0.71      1000
+         dog       0.74      0.72      0.73      1000
+        frog       0.81      0.85      0.83      1000
+       horse       0.82      0.76      0.79      1000
+        ship       0.83      0.81      0.82      1000
+       truck       0.87      0.83      0.85      1000
+
+    accuracy                           0.77     10000
+   macro avg       0.77      0.77      0.77     10000
+weighted avg       0.77      0.77      0.77     10000
+
+Accuracy: 0.7711, инференс: 28.95 сек на 10000 картинок
+
+#########
+ Обучение: facebook/dinov2-base 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 223/223 [00:00<00:00, 3487.19it/s]
+[transformers] Dinov2ForImageClassification LOAD REPORT from: facebook/dinov2-base
+Key               | Status  | 
+------------------+---------+-
+classifier.bias   | MISSING | 
+classifier.weight | MISSING | 
+
+Notes:
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.0995
+  батч: 800/1407, train_loss 0.0489
+  батч: 1200/1407, train_loss 0.0560
+  val_loss 0.0554
+  сохранены веса лучшей модели: weights/facebook_dinov2-base_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0372
+  батч: 800/1407, train_loss 0.0314
+  батч: 1200/1407, train_loss 0.0382
+  val_loss 0.0708
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0220
+  батч: 800/1407, train_loss 0.0273
+  батч: 1200/1407, train_loss 0.0277
+  val_loss 0.0644
+Обучение заняло 877.0 сек
+
+#########
+ Оценка: facebook/dinov2-base 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 223/223 [00:00<00:00, 3204.33it/s]
+[transformers] Dinov2ForImageClassification LOAD REPORT from: facebook/dinov2-base
+Key               | Status  | 
+------------------+---------+-
+classifier.bias   | MISSING | 
+classifier.weight | MISSING | 
+
+Notes:
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+              precision    recall  f1-score   support
+
+    airplane       0.99      0.99      0.99      1000
+  automobile       0.99      0.99      0.99      1000
+        bird       0.98      0.99      0.98      1000
+         cat       0.94      0.98      0.96      1000
+        deer       0.99      0.98      0.99      1000
+         dog       0.99      0.95      0.97      1000
+        frog       0.99      0.99      0.99      1000
+       horse       0.99      0.99      0.99      1000
+        ship       0.99      0.99      0.99      1000
+       truck       0.99      0.99      0.99      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9836, инференс: 58.44 сек на 10000 картинок
+
+#########
+ Обучение: maxvit_base_tf_224.in1k 
+#########
+
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.5001
+  батч: 800/1407, train_loss 0.3722
+  батч: 1200/1407, train_loss 0.3481
+  val_loss 0.3339
+  сохранены веса лучшей модели: weights/maxvit_base_tf_224.in1k_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.3135
+  батч: 800/1407, train_loss 0.3377
+  батч: 1200/1407, train_loss 0.3152
+  val_loss 0.3199
+  сохранены веса лучшей модели: weights/maxvit_base_tf_224.in1k_best.pt
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.2952
+  батч: 800/1407, train_loss 0.3044
+  батч: 1200/1407, train_loss 0.3119
+  val_loss 0.3139
+  сохранены веса лучшей модели: weights/maxvit_base_tf_224.in1k_best.pt
+Обучение заняло 1388.6 сек
+
+#########
+ Оценка: maxvit_base_tf_224.in1k 
+#########
+
+              precision    recall  f1-score   support
+
+    airplane       0.91      0.83      0.87      1000
+  automobile       0.96      0.92      0.94      1000
+        bird       0.83      0.91      0.87      1000
+         cat       0.88      0.81      0.84      1000
+        deer       0.89      0.84      0.86      1000
+         dog       0.88      0.89      0.88      1000
+        frog       0.90      0.94      0.92      1000
+       horse       0.92      0.89      0.90      1000
+        ship       0.82      0.96      0.88      1000
+       truck       0.95      0.93      0.94      1000
+
+    accuracy                           0.89     10000
+   macro avg       0.89      0.89      0.89     10000
+weighted avg       0.89      0.89      0.89     10000
+
+Accuracy: 0.8909, инференс: 90.57 сек на 10000 картинок
+
+#########
+ Обучение: microsoft/cvt-w24-384-22k 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 833/833 [00:00<00:00, 15033.80it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.6504
+  батч: 800/1407, train_loss 0.5715
+  батч: 1200/1407, train_loss 0.5633
+  val_loss 0.0688
+  сохранены веса лучшей модели: weights/microsoft_cvt-w24-384-22k_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.5636
+  батч: 800/1407, train_loss 0.5760
+  батч: 1200/1407, train_loss 0.5681
+  val_loss 0.0656
+  сохранены веса лучшей модели: weights/microsoft_cvt-w24-384-22k_best.pt
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.5615
+  батч: 800/1407, train_loss 0.5589
+  батч: 1200/1407, train_loss 0.5745
+  val_loss 0.0655
+  сохранены веса лучшей модели: weights/microsoft_cvt-w24-384-22k_best.pt
+Обучение заняло 8364.8 сек
+
+#########
+ Оценка: microsoft/cvt-w24-384-22k 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 833/833 [00:00<00:00, 12531.63it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.98      0.98      0.98      1000
+  automobile       0.98      0.99      0.99      1000
+        bird       0.98      0.97      0.98      1000
+         cat       0.97      0.93      0.94      1000
+        deer       0.98      0.98      0.98      1000
+         dog       0.94      0.97      0.96      1000
+        frog       0.97      1.00      0.99      1000
+       horse       0.99      0.99      0.99      1000
+        ship       0.99      0.99      0.99      1000
+       truck       0.99      0.97      0.98      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9772, инференс: 552.08 сек на 10000 картинок
+
+#########
+ Обучение: microsoft/swin-large-patch4-window7-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 449/449 [00:00<00:00, 8402.57it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.1866
+  батч: 800/1407, train_loss 0.0616
+  батч: 1200/1407, train_loss 0.0608
+  val_loss 0.0557
+  сохранены веса лучшей модели: weights/microsoft_swin-large-patch4-window7-224_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0424
+  батч: 800/1407, train_loss 0.0432
+  батч: 1200/1407, train_loss 0.0464
+  val_loss 0.0563
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0283
+  батч: 800/1407, train_loss 0.0343
+  батч: 1200/1407, train_loss 0.0387
+  val_loss 0.0591
+Обучение заняло 1565.0 сек
+
+#########
+ Оценка: microsoft/swin-large-patch4-window7-224 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 449/449 [00:00<00:00, 23766.31it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.98      0.99      0.99      1000
+  automobile       0.98      0.99      0.99      1000
+        bird       0.99      0.98      0.98      1000
+         cat       0.95      0.96      0.96      1000
+        deer       0.98      0.99      0.99      1000
+         dog       0.97      0.97      0.97      1000
+        frog       0.99      0.99      0.99      1000
+       horse       0.99      0.99      0.99      1000
+        ship       1.00      0.98      0.99      1000
+       truck       0.98      0.98      0.98      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9822, инференс: 103.45 сек на 10000 картинок
+
+#########
+ Обучение: google/vit-large-patch16-224 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 392/392 [00:00<00:00, 27391.37it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.1389
+  батч: 800/1407, train_loss 0.0681
+  батч: 1200/1407, train_loss 0.0597
+  val_loss 0.0636
+  сохранены веса лучшей модели: weights/google_vit-large-patch16-224_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0461
+  батч: 800/1407, train_loss 0.0464
+  батч: 1200/1407, train_loss 0.0441
+  val_loss 0.0672
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0351
+  батч: 800/1407, train_loss 0.0352
+  батч: 1200/1407, train_loss 0.0376
+  val_loss 0.0611
+  сохранены веса лучшей модели: weights/google_vit-large-patch16-224_best.pt
+Обучение заняло 2256.6 сек
+
+#########
+ Оценка: google/vit-large-patch16-224 
+#########
+
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 392/392 [00:00<00:00, 26020.24it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.98      0.98      0.98      1000
+  automobile       0.98      0.99      0.99      1000
+        bird       0.99      0.98      0.99      1000
+         cat       0.96      0.95      0.95      1000
+        deer       0.98      0.99      0.98      1000
+         dog       0.96      0.96      0.96      1000
+        frog       0.99      0.99      0.99      1000
+       horse       0.99      0.99      0.99      1000
+        ship       0.99      0.98      0.99      1000
+       truck       0.98      0.98      0.98      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9800, инференс: 150.44 сек на 10000 картинок
+
+#########
+ Обучение: facebook/convnextv2-large-22k-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 380/380 [00:00<00:00, 6063.55it/s]
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.1124
+  батч: 800/1407, train_loss 0.0646
+  батч: 1200/1407, train_loss 0.0574
+  val_loss 0.0613
+  сохранены веса лучшей модели: weights/facebook_convnextv2-large-22k-224_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0418
+  батч: 800/1407, train_loss 0.0423
+  батч: 1200/1407, train_loss 0.0423
+  val_loss 0.0633
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0252
+  батч: 800/1407, train_loss 0.0354
+  батч: 1200/1407, train_loss 0.0320
+  val_loss 0.0700
+Обучение заняло 1636.8 сек
+
+#########
+ Оценка: facebook/convnextv2-large-22k-224 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 380/380 [00:00<00:00, 3025.35it/s]
+              precision    recall  f1-score   support
+
+    airplane       0.97      0.99      0.98      1000
+  automobile       0.98      0.99      0.99      1000
+        bird       0.99      0.99      0.99      1000
+         cat       0.97      0.96      0.96      1000
+        deer       0.99      0.99      0.99      1000
+         dog       0.97      0.97      0.97      1000
+        frog       0.99      0.99      0.99      1000
+       horse       0.99      0.99      0.99      1000
+        ship       0.99      0.98      0.99      1000
+       truck       0.99      0.98      0.98      1000
+
+    accuracy                           0.98     10000
+   macro avg       0.98      0.98      0.98     10000
+weighted avg       0.98      0.98      0.98     10000
+
+Accuracy: 0.9830, инференс: 109.33 сек на 10000 картинок
+
+#########
+ Обучение: facebook/dinov2-large 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 439/439 [00:00<00:00, 3540.95it/s]
+[transformers] Dinov2ForImageClassification LOAD REPORT from: facebook/dinov2-large
+Key               | Status  | 
+------------------+---------+-
+classifier.weight | MISSING | 
+classifier.bias   | MISSING | 
+
+Notes:
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.0658
+  батч: 800/1407, train_loss 0.0265
+  батч: 1200/1407, train_loss 0.0303
+  val_loss 0.0321
+  сохранены веса лучшей модели: weights/facebook_dinov2-large_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.0156
+  батч: 800/1407, train_loss 0.0172
+  батч: 1200/1407, train_loss 0.0127
+  val_loss 0.0367
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.0079
+  батч: 800/1407, train_loss 0.0083
+  батч: 1200/1407, train_loss 0.0132
+  val_loss 0.0465
+Обучение заняло 2971.4 сек
+
+#########
+ Оценка: facebook/dinov2-large 
+#########
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 439/439 [00:00<00:00, 3336.37it/s]
+[transformers] Dinov2ForImageClassification LOAD REPORT from: facebook/dinov2-large
+Key               | Status  | 
+------------------+---------+-
+classifier.weight | MISSING | 
+classifier.bias   | MISSING | 
+
+Notes:
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+              precision    recall  f1-score   support
+
+    airplane       0.99      1.00      1.00      1000
+  automobile       0.99      0.99      0.99      1000
+        bird       0.99      0.99      0.99      1000
+         cat       0.97      0.98      0.98      1000
+        deer       1.00      0.99      0.99      1000
+         dog       0.99      0.98      0.98      1000
+        frog       1.00      0.99      0.99      1000
+       horse       1.00      0.99      1.00      1000
+        ship       0.99      1.00      1.00      1000
+       truck       0.99      0.99      0.99      1000
+
+    accuracy                           0.99     10000
+   macro avg       0.99      0.99      0.99     10000
+weighted avg       0.99      0.99      0.99     10000
+
+Accuracy: 0.9906, инференс: 198.02 сек на 10000 картинок
+
+#########
+ Обучение: maxvit_large_tf_224.in1k 
+#########
+
+Эпоха 1/3
+  батч: 400/1407, train_loss 0.4244
+  батч: 800/1407, train_loss 0.3489
+  батч: 1200/1407, train_loss 0.3382
+  val_loss 0.3128
+  сохранены веса лучшей модели: weights/maxvit_large_tf_224.in1k_best.pt
+Эпоха 2/3
+  батч: 400/1407, train_loss 0.2949
+  батч: 800/1407, train_loss 0.3069
+  батч: 1200/1407, train_loss 0.2971
+  val_loss 0.3030
+  сохранены веса лучшей модели: weights/maxvit_large_tf_224.in1k_best.pt
+Эпоха 3/3
+  батч: 400/1407, train_loss 0.2793
+  батч: 800/1407, train_loss 0.2844
+  батч: 1200/1407, train_loss 0.2780
+  val_loss 0.2900
+  сохранены веса лучшей модели: weights/maxvit_large_tf_224.in1k_best.pt
+Обучение заняло 2028.7 сек
+
+#########
+ Оценка: maxvit_large_tf_224.in1k 
+#########
+
+              precision    recall  f1-score   support
+
+    airplane       0.93      0.89      0.91      1000
+  automobile       0.97      0.93      0.95      1000
+        bird       0.88      0.87      0.87      1000
+         cat       0.85      0.85      0.85      1000
+        deer       0.87      0.87      0.87      1000
+         dog       0.87      0.90      0.89      1000
+        frog       0.92      0.92      0.92      1000
+       horse       0.92      0.93      0.93      1000
+        ship       0.91      0.94      0.92      1000
+       truck       0.94      0.96      0.95      1000
+
+    accuracy                           0.91     10000
+   macro avg       0.91      0.91      0.91     10000
+weighted avg       0.91      0.91      0.91     10000
+
+Accuracy: 0.9058, инференс: 132.45 сек на 10000 картинок
+
+#########
+ СВОДНАЯ ТАБЛИЦА 
+#########
+
+model                                              acc   train, s   infer, s     ms/img
+---------------------------------------------------------------------------------------
+microsoft/swin-base-patch4-window7-224          0.9762      803.5      53.18      5.318
+google/vit-base-patch16-224                     0.9676      639.3      42.69      4.269
+facebook/convnextv2-base-22k-224                0.9782      841.8      57.44      5.744
+microsoft/cvt-21                                0.7711      427.0      28.95      2.895
+facebook/dinov2-base                            0.9836      877.0      58.44      5.844
+maxvit_base_tf_224.in1k                         0.8909     1388.6      90.57      9.057
+microsoft/cvt-w24-384-22k                       0.9772     8364.8     552.08     55.208
+microsoft/swin-large-patch4-window7-224         0.9822     1565.0     103.45     10.345
+google/vit-large-patch16-224                    0.9800     2256.6     150.44     15.044
+facebook/convnextv2-large-22k-224               0.9830     1636.8     109.33     10.933
+facebook/dinov2-large                           0.9906     2971.4     198.02     19.802
+maxvit_large_tf_224.in1k                        0.9058     2028.7     132.45     13.245
